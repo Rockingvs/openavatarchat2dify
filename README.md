@@ -31,14 +31,14 @@ git clone https://github.com/HumanAIGC-Engineering/OpenAvatarChat.git
 
 第三步：配置文件中相关内容（代码26-29行）
 ```
-    model_name: str = Field(default="e8df634e-fa77-4b65-ae8a-65e54142ab44")  # Dify 中部署的模型名称</br>
-    system_prompt: str = Field(default="请你扮演一个 AI 助手，用简短的对话来回答用户的问题，并在对话内容中加入合适的标点符号，不需要加入标点符号相关的内容")  # 保持原有系统提示</br>
-    api_key: str = Field(default="app-XHOpt25w1eOHNHoB4s6tSCli")  # 配置Dify的api_key</br>
-    api_url: str = Field(default="http://192.168.1.9/v1")  # 配置Dify的API服务器地址</br>
+model_name: str = Field(default="e8df634e-fa77-4b65-ae8a-65e54142ab44")  # Dify 中部署的模型名称</br>
+system_prompt: str = Field(default="请你扮演一个 AI 助手，用简短的对话来回答用户的问题，并在对话内容中加入合适的标点符号，不需要加入标点符号相关的内容")  # 保持原有系统提示</br>
+api_key: str = Field(default="app-XHOpt25w1eOHNHoB4s6tSCli")  # 配置Dify的api_key</br>
+api_url: str = Field(default="http://192.168.1.9/v1")  # 配置Dify的API服务器地址</br>
 ```
 （代码最后一行）
 ```
-    response = requests.post('http://192.168.1.9/v1/chat-messages', headers=headers, json=payload) # 替换为你的dify的api地址</br>
+response = requests.post('http://192.168.1.9/v1/chat-messages', headers=headers, json=payload) # 替换为你的dify的api地址</br>
 ```
 ## 可能出现的问题</br>
 如果出现下方报错，将代码第20行和第45行的ChatHistory相关代码注释即可</br>
